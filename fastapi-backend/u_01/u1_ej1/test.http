@@ -1,0 +1,7 @@
+### Probar endpoint raíz
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+### Probar endpoint ping
+GET http://127.0.0.1:8000/ping
+Accept: application/json

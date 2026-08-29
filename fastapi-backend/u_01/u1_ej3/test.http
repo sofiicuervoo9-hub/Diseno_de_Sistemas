@@ -1,0 +1,17 @@
+### 1. Obtener modelo alexnet (valor válido)
+# Funciona porque "alexnet" está definido en la clase ModelName
+GET http://127.0.0.1:8000/models/alexnet
+Accept: application/json
+
+### 2. Obtener modelo resnet (valor válido)
+GET http://127.0.0.1:8000/models/resnet
+Accept: application/json
+
+### 3. Obtener modelo lenet (valor válido)
+GET http://127.0.0.1:8000/models/lenet
+Accept: application/json
+
+### 4. Valor inválido (no está en el Enum)
+# FastAPI devuelve 422 Unprocessable Entity porque "abc" no es un ModelName válido
+GET http://127.0.0.1:8000/models/abc
+Accept: application/json
